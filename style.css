@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* My Css Variables */
+:root {
+    --white: #edebeb;
+    --button: rgb(151, 2, 2);
+    --text-size : 20px;
+  }
+  
+ 
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-size:100%;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  
+}
+body{
+    display: grid;
+    
+    
+}
+
+.header{
+      .desktopNav{
+         display: flex;
+         align-items : center;
+         justify-content: center;
+         gap:10rem;
+         background-color: black;
+         padding:1.5rem;
+         position: fixed;
+         width:100%;
+         z-index: 100;
+
+         .links{
+             display: flex;
+             align-items: center;
+             gap:1.3rem;
+         }
+
+         .mobile-icon {
+             color:var(--white);
+             font-size: var(--text-size);
+             display: none;
+         }
+
+         .cv{
+             background-color: var(--button);
+             width:130px;
+             text-align:center;
+             padding:9px;
+             border-radius:5px;
+         }
+      }
+
+      .desktopNav a{
+         color:var(--white);
+         font-size: var(--text-size);
+      }
+
+      .mobile-nav{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        padding: 1rem;
+        background-color: black;
+        font-size: var(--text-size);
+       
+  
+       
+            .links{
+                display: flex;
+                gap:1rem;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .cv{
+                background-color: var(--button);
+                width:130px;
+                text-align:center;
+                padding:9px;
+                border-radius:5px;  
+            }
+        
+
+      }
+
+      .mobile-nav a{
+         color:var(--white)
+      }
+      
+}
+
+.time{
+      display: flex;
+      align-items :center;
+      justify-content:center;
+      gap:1rem;
+      font-size: var(--text-size);
+      padding:2rem;
+      margin-top:5rem;
+
+      .hour, .minute{
+          background-color: rgb(247, 242, 242);
+          padding:8px;
+          border-radius: 4px;
+      }
+     
+}
+
+.banner{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap:1rem;
+      
+         
+         img{
+             border:4px solid var(--button);
+             width:280px;
+             height:280px;
+             border-radius:100%;
+             transition: 1s ease-in;
+
+             &:hover{
+                   transform:scale(110%);
+             }
+         }
+
+         .img img{
+              width:100%;
+
+         }
+
+         .banner-text{
+              display: flex;
+              flex-direction: column;
+              align-items:center;
+              margin:0 auto;
+              justify-content: center;
+              gap:.2rem;
+              
+             .my-name{
+                 font-size:35px;
+                 font-weight:500;
+             }
+             .role{
+                font-size:1.2rem;
+                font-weight:400;
+                
+             }
+
+             .banner-cta{
+                background-color: var(--button);
+                width:150px;
+                text-align:center;
+                padding:9px;
+                border-radius:5px;
+             }
+
+             .banner-cta a{
+                  color:white;
+                  font-size: 17px;
+             }
+         }
+      
+}
+
+.about-me{
+     height:75vh;
+     margin:0 auto;
+     margin-top:4rem;
+     display: flex;
+     align-items:center;
+     justify-content: center;
+     gap:4rem;
+
+     .col1{
+        
+            img{
+                 width:330px;
+                 border-radius:5px;
+            }
+     }
+
+     .col2{
+        .row1{
+             line-height:35px;
+            h2{
+                font-size:var(--text-size);
+            }   
+           
+        }
+    
+        .row2{
+           
+             .about-me-text{
+                  font-size: 18px;
+                  line-height: 30px;
+                  word-spacing: 2px;
+                  width:400px;
+                  
+             }
+    
+             .socials{
+                 display: flex;
+                 align-items:center;
+                 gap:1rem;
+                
+                 .social{
+                     display: flex;
+                     justify-content: center;
+                     align-items:center;
+                      /* padding:10px; */
+                      width:30px;
+                      height:30px;
+                      border-radius:5px;
+                      background-color: var(--button);
+                 }
+    
+                 .social a{
+                     color: var(--white);
+    
+                 }
+             }
+        }
+
+     }
+   
+}
+
+.skillset{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        gap:3rem;
+        /* margin-top:3rem; */
+        
+     .skill{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height:110px;
+          width:110px;
+          border:1px solid;
+          border-radius:100%;
+          background-color: black;
+          color:white;
+          cursor:pointer;
+          transition: 1s ease;
+          padding:2rem;
+             &:hover{
+                transform: translateY(-7px);
+                box-shadow: 5px 5px 5px lightgrey;
+             }
+
+     }
+
+
+}
+
+.projects{
+     height:50vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size:50px;
+}
+
+.footer{
+      background-color: black;
+      text-align:center;
+      padding:2rem;
+}
+
+
+
+
+/* media query */
+@media only screen and (max-width: 768px) {
+      .header{
+        /* overflow: hidden; */
+          .desktopNav{
+            justify-content: space-between;
+              .links{
+                 display: none;
+              }
+
+              .mobile-icon{
+                  display: flex;
+              }
+
+              .cv{
+                 display:none;
+              }
+          }
+
+          .mobile-nav{
+             display:flex;
+             transform: translateY(-500px);
+             height:0;
+             position: fixed;
+             transition: 1.5s ease;
+             width:100%;
+             
+          }
+
+          .open{
+              transform: translateY(70px);
+              height:220px;
+              transition:1.5s ease;
+          }
+      }
+
+      .time{
+        
+      }
+
+      .banner{
+          flex-wrap: wrap;
+          gap:2rem;
+          padding:0;
+          margin-top:1rem;
+          .img{
+             width:280px;
+             height:280px;
+
+          }
+          .img img{
+             width : 100%;
+          }
+          .banner-text{
+               align-items: center;
+                  
+          }
+      }
+
+     
+      .about-me{
+        flex-wrap: wrap;
+        text-align:center;
+        padding:1rem;
+        height:auto;
+        gap:.5rem;
+
+            .col1 img{
+                 width:300px;
+            }
+      
+            .col2{
+                .row1{
+                    
+                }
+                .row2{
+                    
+                     .about-me-text{
+                         width:440px;
+                     }
+                }
+               
+               
+            }
+
+            .socials{
+                 justify-content: center;
+            }
+
+           
+      }
+
+      .skillset{
+           display: grid;
+           grid-template-columns: repeat(2, 200px);
+           place-items: center;
+           margin-top:2.5rem;
+           
+      }
+
+      .projects{
+        
+      }
+
+    
+  
+  }
